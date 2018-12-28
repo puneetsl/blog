@@ -4,6 +4,7 @@ import os
 def notify(fin):
     if str(fin).find("->") !=-1:
         sg.Popup('Published Successfully')
+        print(str(fin))
     else:
         sg.Popup(str(fin))
 def run(command, print_command=True):
