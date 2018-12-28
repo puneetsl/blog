@@ -1,6 +1,11 @@
+import PySimpleGUI as sg # pip install PySimpleGUI
 from sultan.api import Sultan
 import os
-
+def notify(fin):
+    if str(fin).find("->") !=-1:
+        sg.Popup('Published Successfully')
+    else:
+        sg.Popup(str(fin))
 def run(command, print_command=True):
     with Sultan.load() as s:
         s.commands = [command]
@@ -17,10 +22,12 @@ if os.name == 'nt':
     print(run('git pull &'))
     print(run('git add -A &'))
     print(run('git commit -m "update" &'))
-    print(run('git push &'))
+    notify(run('git push &'))
+
+
 else:
     print(run('git fetch'))
     print(run('git pull'))
     print(run('git add -A'))
     print(run('git commit -m "update"'))
-    print(run('git push'))
+    notify(run('git push'))
