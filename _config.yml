@@ -1,1 +1,4 @@
-theme: jekyll-theme-minimal
+remote_theme: niklasbuschmann/contrast
+
+plugins:
+  - jekyll-remote-theme
