@@ -7,7 +7,7 @@ if post_title != "":
     d = datetime.datetime.today()
     d_text = d.strftime('%Y-%m-%d')
     post_title = post_title.replace(" ", "-")
-    f_name = "_posts/"+d_text+"-"+post_title
+    f_name = "_posts/"+d_text+"-"+post_title+".md"
     mode = 'a' if os.path.exists(f_name) else 'w'
     if not os.path.exists(f_name):
         with open(f_name, mode) as f:
