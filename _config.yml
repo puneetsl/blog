@@ -10,8 +10,8 @@ disqus: 'puneetsl'
 
 # Authors
 authors:
-  Puneet:
-    name: puneet
+  puneet:
+    name: Puneet
     display_name: Puneet
     gravatar: 7f0f3580449f006696024b765057772e
     email: puneet.ludu@gmail.com
