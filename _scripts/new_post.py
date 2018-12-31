@@ -11,7 +11,12 @@ if post_title != "":
     mode = 'a' if os.path.exists(f_name) else 'w'
     if not os.path.exists(f_name):
         with open(f_name, mode) as f:
-            f.write("")
+            f.write("""---
+layout: post
+author: puneet
+image: assets/images/5.jpg
+---
+            """)
         f.close()
     else:
         sg.Popup('Blog already exists, choose a different name')
